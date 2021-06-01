@@ -1,5 +1,4 @@
 const { Schema, nodel } = require('mongoose');
-const dateFormat = require('../utils/dateFormat');
 
 const UserSchema = new Schema(
   {
