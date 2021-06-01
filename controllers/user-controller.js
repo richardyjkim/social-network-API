@@ -12,7 +12,7 @@ const userController = {
       .then(dbUserData => res.json(dbUserData))
       .catch(err => {
         console.log(err);
-        res.sendStatus(400)
+        res.sendStatus(400);
       });
   },
 
@@ -87,7 +87,7 @@ const userController = {
 
   // delete friend
   deleteFriend({ params }, res) {
-    User.findOneAndDelete(
+    User.findOneAndUpdate(
       { _id: params.userId },
       { $pull: { friends: params.friendId } },
       { new: true }
